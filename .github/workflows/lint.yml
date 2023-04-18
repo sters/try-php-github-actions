@@ -5,6 +5,10 @@ on: pull_request
 jobs:
   phpcs:
     runs-on: ubuntu-latest
+    permissions:
+      checks: write
+      contents: read
+      pull-requests: write
     steps:
       - uses: actions/checkout@v3
       - uses: reviewdog/action-setup@v1
@@ -23,6 +27,10 @@ jobs:
 
   phpstan:
     runs-on: ubuntu-latest
+    permissions:
+      checks: write
+      contents: read
+      pull-requests: write
     steps:
       - uses: actions/checkout@v3
       - uses: reviewdog/action-setup@v1
