@@ -7,6 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: reviewdog/action-setup@v1
       - uses: shivammathur/setup-php@v2
       - run: composer install --prefer-dist
       - name: do
@@ -22,6 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: reviewdog/action-setup@v1
       - uses: shivammathur/setup-php@v2
       - run: composer install --prefer-dist
       - name: do
