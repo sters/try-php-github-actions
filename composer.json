@@ -1,0 +1,18 @@
+{
+    "name": "sters/try-php-github-actions",
+    "autoload": {
+        "psr-4": {
+            "Sters\\TryPhpGithubActions\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "sters",
+            "email": "sters@users.noreply.github.com"
+        }
+    ],
+    "require-dev": {
+        "phpstan/phpstan": "^1.10",
+        "squizlabs/php_codesniffer": "^3.7"
+    }
+}
