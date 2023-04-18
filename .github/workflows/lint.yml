@@ -19,7 +19,7 @@ jobs:
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: ./vendor/bin/phpcs --report=emacs --standard=phpcs.xml ./ | reviewdog -reporter=github-pr-review -efm='%f:%l:%c:%m'
       - name: try autofix
-        run: ./vendor/bin/phpcbf --standard=phpcs.xml ./
+        run: ./vendor/bin/phpcbf --standard=phpcs.xml ./ || true
       - name: suggester / phpcs
         uses: reviewdog/action-suggester@v1
         with:
